@@ -2412,7 +2412,7 @@ standard_ProcessUtility(PlannedStmt *pstmt,
 
 							if (name && strcmp(name, IMPLICIT_SAVEPOINT_NAME) == 0)
 								ereport(ERROR,
-										(errcode(ERRCODE_INVALID_SAVEPOINT_SPECIFICATION),
+										(errcode(ERRCODE_S_E_INVALID_SPECIFICATION),
 											 errmsg("cannot use this name for a savepoint, please use another name")));
 
 							elog(DEBUG1, "[NEST_LEVEL_CHECK:%d] recv savepoint %s. cur_level: %d", MyProcPid, name, GetCurrentTransactionNestLevel());
